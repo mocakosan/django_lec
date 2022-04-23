@@ -139,22 +139,9 @@ body {
   background-color: #fff;
 
 }
-.bd .img {
-    width:50px;
-    height:50px;
-}
-.bd .title {
-   display:flex;
-   flex-direction:row;
-}
-.bd .title h3 {
-    margin-right: 30px;
 
-}
-.bd .title h4 {
-    margin-right: 30px;
-    width:200px
-}
+
+
 
 .sec {
   width: 100%;
@@ -258,7 +245,7 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  height: 500px;
+  height: 800px;
 
 }
 .bd h1,
@@ -277,6 +264,23 @@ body {
   margin-top: 20px;
   font-size: 25px;
 
+}
+
+.bd img {
+    width:100px;
+    height:100px;
+}
+.bd .title {
+   display:flex;
+   flex-direction:row;
+}
+.bd .title h3 {
+    margin-right: 30px;
+
+}
+.bd .title h4 {
+    margin-right: 30px;
+    width:200px
 }
 
 .footer {
