@@ -53,26 +53,29 @@
 </head>
 <body>
   <div class="bd">
-    <h1>게시판</h1>
-    <h2>통합 게시판</h2>
+    <div class="title">
+      <h1>게시판</h1>
+      <h2>통합 게시판</h2>
+    </div>
        {% if content_list %}
           {% for content in content_list %}
             <hr/>
-
+      <div class="sec">
+          <div class="bx">
             <img src="{{ content.imgfile.url }}" alt="">
 
-            <div class="title">
+            <div class="content">
               <h3><a href="/misite/{{ content.id }}">{{ content.title }}</a> </h3>
               <h4>{{ content.content }}</h4>
               <h5>{{ content.pub_date }}</h5>
             </div>
-          {% endfor %}
-      {% else %}
-        <p>content가 없습니다.</p>
-      {% endif %}
-
+            {% endfor %}
+            {% else %}
+             <p>content가 없습니다.</p>
+            {% endif %}
+          </div>
+      </div>
   </div>
-  </body>
   <div class="footer">
     <div class="ft_1">
       <ul>
@@ -93,4 +96,7 @@
       </ul>
       <p>COPYRIGHT. 2022.ALL RIGHTS RESERVED.</p>
     </div>
+  </div>
+</body>
+
 </html>

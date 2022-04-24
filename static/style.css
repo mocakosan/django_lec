@@ -142,90 +142,6 @@ body {
 
 
 
-
-.sec {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.sec ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-}
-.sec ul li{
-  margin-right: 20px;
-  margin-bottom: 40px;
-}
-.sec ul li h1 {
-  cursor: pointer;
-  font-size: 40px;
-}
-.sec ul li h2 {
-
-  font-size: 30px;
-}
-.sec ul li img  {
-  width: 380px;
-  cursor: pointer;
-}
-
-.swiper-container {
-  max-width: 1200px;
-  position: relative;
-  margin: auto;
-}
-
-.swiper-slide {
-  text-align:center;
-  display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
-  align-items:center; /* 위아래 기준 중앙정렬 */
-  justify-content:center; /* 좌우 기준 중앙정렬 */
-}
-.swiper-slide img {
-  width: 1200px;
-  height: 600px;
-}
-.sec2 ul li {
-  margin-right: 50px;
-}
-.sec2 ul li .swiper-container {
-  max-width: 350px;
-  height: 350px;
-  position: relative;
-  margin: auto;
-}
-.sec2 ul li .swiper-container .swiper-slide {
-  text-align:center;
-  display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
-  align-items:center; /* 위아래 기준 중앙정렬 */
-  justify-content:center; /* 좌우 기준 중앙정렬 */
-}
-.sec3 {
-  display: flex;
-  flex-direction: row;
-
-}
-.sec3 .box1 {
-  width: 600px;
-  height: 500px;
-}
-.sec3 .sec3_1 {
-  display: flex;
-  flex-direction: column;
-}
-.sec3 .sec3_1 .box2 img,
-.sec3 .sec3_1 .box3 img
- {
-  width: 550px;
-  height: 250px;
-  margin-left: 50px;
-}
-.sec3 .sec3_1 .box2 img {
-  margin-bottom: 50px;
-}
-
 #to-top {
   position: fixed;
   bottom: 30px;
@@ -248,6 +164,10 @@ body {
   height: 800px;
 
 }
+.bd {
+    display:flex;
+    flex-direction:column;
+}
 .bd h1,
 .bd h2
 {
@@ -265,25 +185,38 @@ body {
   font-size: 25px;
 
 }
+.bd .sec {
+    display:flex;
+    flex-direction:row;
+}
 
-.bd img {
+.bd .sec .bx {
+    display:flex;
+    flex-direction:column;
+}
+
+.bd .sec .bx img {
     width:100px;
     height:100px;
 }
-.bd .title {
+.bd .sec .bx .content {
    display:flex;
-   flex-direction:row;
+   flex-direction:column;
 }
-.bd .title h3 {
+.bd .sec .bx .content h3 {
     margin-right: 30px;
 
 }
-.bd .title h4 {
+.bd .sec .bx .content h4 {
     margin-right: 30px;
-    width:200px
+
 }
 
 .footer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 800px;
   border-top: 1px solid #aaa;
   margin:50px 0;
 }
