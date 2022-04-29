@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Maincontent
+from .models import MainContent
 
-admin.site.register(Maincontent)
+admin.site.register(MainContent)
 # Register your models here.

@@ -141,7 +141,6 @@ body {
 }
 
 
-
 #to-top {
   position: fixed;
   bottom: 30px;
@@ -157,72 +156,7 @@ body {
   cursor: pointer;
 }
 
-.bd {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 800px;
-
-}
-.bd {
-    display:flex;
-    flex-direction:column;
-}
-.bd h1,
-.bd h2
-{
-
-  text-align: center;
-
-}
-.bd h1 {
-  margin-top: 30px;
-  font-size: 30px;
-
-}
-.bd h2 {
-  margin-top: 20px;
-  font-size: 25px;
-
-}
-.bd .sec {
-    display:flex;
-    flex-direction:row;
-    margin-top:  50px;
-}
-
-.bd .sec .bx {
-    display:flex;
-    flex-direction:row;
-
-}
-.bd .sec .bx .wrap {
-  margin-right: 50px;
-}
-
-.bd .sec .bx img {
-    width:200px;
-    height:200px;
-}
-.bd .sec .bx .content {
-   display:flex;
-   flex-direction:column;
-  text-align: center;
-}
-.bd .sec .bx .content h3 {
-    margin-right: 30px;
-
-}
-.bd .sec .bx .content h4 {
-    margin-right: 30px;
-
-}
-
 .footer {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 800px;
   border-top: 1px solid #aaa;
   margin:50px 0;
 }
@@ -265,7 +199,3 @@ body {
   color: #aaa;
   margin: 10px 20px;
 }
-
-
-
-

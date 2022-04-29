@@ -1,74 +1,28 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+ {% extends 'base.html' %}
+ {% block content %}
 
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q==" crossorigin="anonymous"></script>
-
-
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-
-  <title>Enjoy Gallery</title>
-
-  <div class="hd">
-    <div class="header">
-
-      <ul>
-        <li>Home
-        </li>
-        <li>게시판<div class="material-icons">
-          arrow_drop_down
-        </div>
-        </li>
-        <li>공지사항<div class="material-icons">
-          arrow_drop_down
-        </div>
-        </li>
-
-
-        <li>고객센터<div class="material-icons">
-          arrow_drop_down
-        </div>
-        </li>
-      </ul>
-      <div class="top_menu">
-        <ul>
-          <li>로그인</li>
-          <li>회원가입</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</head>
-<body>
   <div class="bd">
     <div class="title">
-      <h1>게시판s</h1>
-      <h2>통합 게시판</h2>
+      <h1>게시판</h1>
+      <h2>취합 게시판</h2>
     </div>
-       {% if content_list %}
-          {% for content in content_list %}
-            <hr/>
+       <hr/>
       <div class="sec">
           <div class="bx">
-            <img src="{{ content.imgfile.url }}" alt="">
-
-            <div class="content">
-              <h3><a href="/misite/{{ content.id }}">{{ content.title }}</a> </h3>
-              <h4>{{ content.content }}</h4>
-              <h5>{{ content.pub_date }}</h5>
-            </div>
+              {% if content_list %}
+              {% for content in content_list %}
+              <div class="wrap">
+                <img src="{{ content.imgfile.url }}" alt="">
+                <div class="content">
+                  <h3><a href="/misite/{{ content.id }}">{{ content.title }}</a> </h3>
+                  <h4>{{ content.content | truncatewords:30 }}</h4>
+                  <h5>{{ content.pub_date }}</h5>
+                  <button class="bt" ><a href="{% url 'detail' content.id %}">매출액 보기</a></button>
+                </div>
+              </div>
             {% endfor %}
             {% else %}
              <p>content가 없습니다.</p>
@@ -76,27 +30,5 @@
           </div>
       </div>
   </div>
-  <div class="footer">
-    <div class="ft_1">
-      <ul>
-        <li>소개</li>
-        <li>구입프로세스</li>
-        <li>개인정보처리방침</li>
-        <li>이용약관</li>
-        <li>오시는길</li>
-      </ul>
-      <p>12345 경기도 고양시 덕양구</p>
-    </div>
-    <div class="ft_02">
-      <ul>
-        <li>대표이사 ***</li>
-        <li>사업자번호:123-45-56789</li>
-        <li>Tel.02.123.4567</li>
-        <li>email:asdfg@naver.com</li>
-      </ul>
-      <p>COPYRIGHT. 2022.ALL RIGHTS RESERVED.</p>
-    </div>
-  </div>
-</body>
+ {% endblock %}
 
-</html>
