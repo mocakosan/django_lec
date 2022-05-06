@@ -1,37 +1,38 @@
-
-
-
-  <div class="hd">
+<div class="hd">
     <div class="header">
-      <a href="/"><img src="/media/gallery.png" alt=""></a>
-      <ul>
-        <li><a href="/">회사 소개</a>
-        </li>
-        <li><a href="/mysite/">게시판</a><div class="material-icons">
-          arrow_drop_down
-        </div>
-        </li>
-        <li>공지사항<div class="material-icons">
-          arrow_drop_down
-        </div>
-        </li>
 
-
-        <li>고객센터<div class="material-icons">
-          arrow_drop_down
-        </div>
-        </li>
-      </ul>
-      <div class="top_menu">
         <ul>
+            <a href="/"><img src="/static/gallery.png" alt=""></a>
+            <li><a href="/company/">회사 소개</a>
+            </li>
+            <li><a href="/mysite/">게시판</a>
+                <div class="material-icons">
+                    arrow_drop_down
+                </div>
+            </li>
+            <li><a href="/notices/">공지사항</a>
+                <div class="material-icons">
+                    arrow_drop_down
+                </div>
+            </li>
 
 
-            {% if user.is_authenticated %}
-            <li><a href="{% url 'accounts:logout' %}">{{ user.username }} (logout)</a></li>
-            {% else %}
-            <li><a href="{% url 'accounts:login' %}">login</a></li>
-            {% endif %}
+            <li><a href="/services/">고객센터</a>
+                <div class="material-icons">
+                    arrow_drop_down
+                </div>
+            </li>
         </ul>
-      </div>
+        <div class="top_menu">
+            <ul>
+
+
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'accounts:logout' %}">{{ user.username }} (logout)</a></li>
+                {% else %}
+                <li><a href="{% url 'accounts:login' %}">login</a></li>
+                {% endif %}
+            </ul>
+        </div>
     </div>
-  </div>
+</div>

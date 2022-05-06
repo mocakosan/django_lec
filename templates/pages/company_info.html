@@ -1,22 +1,52 @@
-
 {% extends 'base.html' %}
 {% block content %}
 <style>
+    .bd {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 550px;
+        position: relative;
+    }
+
+    .bd h1 {
+        position: absolute;
+        top: 150px;
+        font-size: 30px;
+    }
+
+    .bd h2 {
+        position: absolute;
+        top: 220px;
+        font-size: 25px;
+    }
+
+    .bd p {
+        position: absolute;
+        top: 250px;
+        font-size: 25px;
+        margin-top: 30px;
+    }
+
     .bd img {
-        width: 200px;
-        height: 100px;
+        position: absolute;
+        width: 500px;
+        left: 700px;
+        top: 135px;
     }
 </style>
 <div class="bd">
-    <h1>樂 갤러리</h1>
-    <h2>About us</h2>
+    <div class="title">
+        <h1>樂 갤러리</h1>
+        <h2>About us</h2>
+    </div>
     <p>樂갤러리는 기존 시장의 관습을 벗어나 작가와 고객,</br>
-      그리고 갤러리가 같은 출발선에서 새로운 문화를 만들어나가려 합니다.</br>
-      에코樂갤러리는 역량 있는 신진작가를 발굴하여 </br>
-      이들이 성장할 수 있는 문화•예술 플랫폼을 구축하고 </br>
-      누구나 예술을 느끼고 즐길 수 있도록  </br>
-      세상에 없던 새로움을 만들어 나가겠습니다.</p>
-
+        그리고 갤러리가 같은 출발선에서 새로운 문화를 만들어나가려 합니다.</br>
+        에코樂갤러리는 역량 있는 신진작가를 발굴하여 </br>
+        이들이 성장할 수 있는 문화•예술 플랫폼을 구축하고 </br>
+        누구나 예술을 느끼고 즐길 수 있도록  </br>
+        세상에 없던 새로움을 만들어 나가겠습니다.</p>
+    <img src="/static/gallery2.png" alt="">
 </div>
-<img src="/media/gallery2.png" alt="">
 {% endblock %}
+

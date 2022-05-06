@@ -6,3 +6,13 @@ def mainpage(request):
 
 def company(request):
     return render(request, 'pages/company_info.html')
+
+def notices(request):
+
+  return render(request, 'pages/notices.html')
+
+def services(request):
+
+  return render(request, 'pages/services.html')
+
+

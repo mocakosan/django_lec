@@ -1,15 +1,241 @@
 {% extends 'base.html' %}
 {% block content %}
- <div class="bd">
-    <h1>樂 갤러리</h1>
-    <h2>About us</h2>
-    <p>樂갤러리는 기존 시장의 관습을 벗어나 작가와 고객,</br>
-      그리고 갤러리가 같은 출발선에서 새로운 문화를 만들어나가려 합니다.</br>
-      에코樂갤러리는 역량 있는 신진작가를 발굴하여 </br>
-      이들이 성장할 수 있는 문화•예술 플랫폼을 구축하고 </br>
-      누구나 예술을 느끼고 즐길 수 있도록  </br>
-      세상에 없던 새로움을 만들어 나가겠습니다.</p>
-    <img src="./image/갤러리.jpeg" alt="">
-  </div>
+<style>
+    body {
+        background-color: #fff;
+
+    }
+
+    .sec {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .sec ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    .sec ul li {
+        margin-right: 20px;
+        margin-bottom: 40px;
+    }
+
+    .sec ul li h1 {
+        cursor: pointer;
+        font-size: 40px;
+    }
+
+    .sec ul li h2 {
+
+        font-size: 30px;
+    }
+
+    .sec ul li img {
+        width: 380px;
+        cursor: pointer;
+    }
+
+    .swiper-container {
+        max-width: 1200px;
+        position: relative;
+        margin: auto;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        display: flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+        align-items: center; /* 위아래 기준 중앙정렬 */
+        justify-content: center; /* 좌우 기준 중앙정렬 */
+    }
+
+    .swiper-slide img {
+        width: 1200px;
+        height: 600px;
+    }
+
+    .sec2 ul li {
+        margin-right: 50px;
+    }
+
+    .sec2 ul li .swiper-container {
+        max-width: 350px;
+        height: 350px;
+        position: relative;
+        margin: auto;
+    }
+
+    .sec2 ul li .swiper-container .swiper-slide {
+        text-align: center;
+        display: flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+        align-items: center; /* 위아래 기준 중앙정렬 */
+        justify-content: center; /* 좌우 기준 중앙정렬 */
+    }
+
+    .sec3 {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .sec3 .box1 {
+        width: 600px;
+        height: 500px;
+    }
+
+    .sec3 .sec3_1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sec3 .sec3_1 .box2 img,
+    .sec3 .sec3_1 .box3 img {
+        width: 550px;
+        height: 250px;
+        margin-left: 50px;
+    }
+
+    .sec3 .sec3_1 .box2 img {
+        margin-bottom: 50px;
+    }
+
+    #to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 999;
+        width: 42px;
+        height: 42px;
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+</style>
+
+<div class="swiper-container swiper1">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/static/가로1200.jpeg"></div>
+        <div class="swiper-slide"><img src="/static/가로11200.jpeg"></div>
+        <div class="swiper-slide"><img src="/static/가로21200.jpeg"></div>
+    </div>
+
+    <!-- 네비게이션 버튼 -->
+    <div class="swiper-button-next"></div><!-- 다음 버튼 (오른쪽에 있는 버튼) -->
+    <div class="swiper-button-prev"></div><!-- 이전 버튼 -->
+
+    <!-- 페이징 -->
+    <div class="swiper-pagination"></div>
+</div>
+<div style="text-align:center; margin-top:5px;">랜덤사진 갤러리1 (swiper1)</div>
+<br>
+
+<div class="sec">
+    <ul>
+        <li>
+            <h1>제목1</h1>
+            <img src="/static/가로280.png" alt="">
+            <h2>소제목1</h2>
+        </li>
+        <li>
+            <h1>제목1</h1>
+            <img src="/static/가로280.png" alt="">
+            <h2>소제목1</h2>
+        </li>
+        <li>
+            <h1>제목1</h1>
+            <img src="/static/가로280.png" alt="">
+            <h2>소제목1</h2>
+
+        </li>
+        <li>
+            <h1>제목1</h1>
+            <img src="/static/가로280.png" alt="">
+            <h2>소제목1</h2>
+        </li>
+        <li>
+            <h1>제목1</h1>
+            <img src="/static/가로280.png" alt="">
+            <h2>소제목1</h2>
+        </li>
+        <li>
+            <h1>제목1</h1>
+            <img src="/static/가로280.png" alt="">
+            <h2>소제목1</h2>
+        </li>
+    </ul>
+    <div class="sec2">
+        <ul>
+            <li>
+                <div class="swiper-container swiper1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="/static/가로150.png"></div>
+                        <div class="swiper-slide"><img src="/static/가로150.png"></div>
+                        <div class="swiper-slide"><img src="/static/가로150.png"></div>
+                    </div>
+
+                    <!-- 네비게이션 버튼 -->
+                    <div class="swiper-button-next"></div><!-- 다음 버튼 (오른쪽에 있는 버튼) -->
+                    <div class="swiper-button-prev"></div><!-- 이전 버튼 -->
+
+                    <!-- 페이징 -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div style="text-align:center; margin-top:5px;">랜덤사진 갤러리1 (swiper1)</div>
+            </li>
+            <li>
+                <div class="swiper-container swiper1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="/static/가로150.png"></div>
+                        <div class="swiper-slide"><img src="/static/가로150.png"></div>
+                        <div class="swiper-slide"><img src="/static/가로150.png"></div>
+                    </div>
+
+                    <!-- 네비게이션 버튼 -->
+                    <div class="swiper-button-next"></div><!-- 다음 버튼 (오른쪽에 있는 버튼) -->
+                    <div class="swiper-button-prev"></div><!-- 이전 버튼 -->
+
+                    <!-- 페이징 -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div style="text-align:center; margin-top:5px;">랜덤사진 갤러리1 (swiper1)</div>
+            </li>
+            <li>
+                <div class="swiper-container swiper1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="/static/가로150.png"></div>
+                        <div class="swiper-slide"><img src="/static/가로150.png"></div>
+                        <div class="swiper-slide"><img src="/static/가로150.png"></div>
+                    </div>
+
+                    <!-- 네비게이션 버튼 -->
+                    <div class="swiper-button-next"></div><!-- 다음 버튼 (오른쪽에 있는 버튼) -->
+                    <div class="swiper-button-prev"></div><!-- 이전 버튼 -->
+
+                    <!-- 페이징 -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div style="text-align:center; margin-top:5px;">랜덤사진 갤러리1 (swiper1)</div>
+            </li>
+        </ul>
+    </div>
+    <div class="sec3">
+
+        <div class="box1"><img src="/static/가로600.png" alt=""></div>
+        <div class="sec3_1">
+            <div class="box2"><img src="/static/가로280.png" alt=""></div>
+            <div class="box3"><img src="/static/가로280.png" alt=""></div>
+        </div>
+    </div>
+
+</div>
+<div id="to-top">
+    <div class="material-icons"> arrow_upward</div>
+</div>
 {% endblock %}
 
