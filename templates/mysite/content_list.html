@@ -15,12 +15,17 @@
               {% if content_list %}
               {% for content in content_list %}
               <div class="wrap">
+                {% if content.imgfile %}
                 <img src="{{ content.imgfile.url }}" alt="">
+                {% endif %}
                 <div class="content">
                   <h3><a href="/misite/{{ content.id }}">{{ content.title }}</a> </h3>
                   <h4>{{ content.content | truncatewords:30 }}</h4>
                   <h5>{{ content.pub_date }}</h5>
-                  <button class="bt" ><a href="{% url 'detail' content.id %}">미술품 자세히 보기</a></button>
+
+                    <h5>{{ content.FileField.url }}</h5>
+
+                  <button class="bt" ><a href="{% url 'detail' content.id %}">매출액 보기</a></button>
                 </div>
               </div>
             {% endfor %}

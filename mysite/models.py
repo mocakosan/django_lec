@@ -6,3 +6,4 @@ class MainContent(models.Model):
     content = models.TextField()
     pub_date = models.DateTimeField('date published')
     imgfile = models.ImageField(null=True, upload_to="media/", blank=True)
+    fileField = models.FileField(null=True, upload_to="media/", blank=True)
